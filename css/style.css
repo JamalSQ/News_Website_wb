@@ -1,0 +1,136 @@
+
+:root{
+    --color-primary:rgb(0, 0, 0);
+    --background-color:rgb(255, 255, 255);
+    --hr-color:rgb(207, 202, 202);
+}
+
+/* :root[mode="dark"]{
+    --color-primary:white;
+    --background-color:black;
+    --hr-color:rgb(207, 202, 202);
+} */
+
+.bgColor-primary{
+    background-color: var(--background-color);
+}
+
+.full-divider{
+    height: 2px !important;
+    background-color: black;
+    opacity: inherit;
+    margin: 0px;
+}
+.full-page-divider{
+    height: 1px !important;
+    background-color: black;
+    opacity: inherit;
+}
+p{
+    line-height: 17px;
+}
+.pm{
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+.medium-img-size{
+    max-width:604%;
+    max-height:337px;
+}
+.small-img-size{
+    width:188px;
+    height:141px;
+    margin-bottom: 10px;
+}
+.header {
+    position: fixed;
+    z-index: 1;
+}
+body > div.container-fluid.header > div.row.sub-heading.bg-light > hr{
+    margin-bottom: 0px;
+}
+.container-fluid,.header{
+    padding-right: 0px;
+}
+.sub-heading ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1px;
+    font-size: 11px;
+}
+.sub-heading ul li {
+    display: inline;
+    padding-right: 15px;
+}
+.main-heading ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.main-heading ul li {
+    display: inline;
+    padding-right: 15px;
+}
+
+.fheading ul {
+    display: flex;
+    align-items: center;
+    line-height: 1px;
+    font-size: 13px;
+    font-weight: 500;
+    /* margin: 0px 0px 5px 60px; */
+}
+
+.fheading ul li {
+    display: inline;
+    padding-right: 15px;
+
+}
+.row,.fheading{
+    margin-right: 0px;
+}
+summary{
+    /* margin-left: 105px; */
+    background-color: lightgrey;
+    width: 20%;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.language{
+    margin-top:-10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    background-color: lightgray;
+    padding-top: 60px;
+  }
+  .fheading ul{
+    /* margin-left: 100px; */
+    letter-spacing: 0.7px;
+    font-weight: 500;
+  }
+
+  .fheading hr{
+    margin-left: 15px;
+    width: 92%;
+    background-color: #b8b5b5;
+    }
+    footer{
+        margin-left: 50px;
+        text-align: left;
+    }
+
+    /* start Crousel */
+    .carousel-item img{
+        max-width: 1281px;
+        margin: auto;
+        max-height: 200px;
+        margin-top: 127px;
+        z-index: -6;
+    }
