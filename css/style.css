@@ -3,6 +3,7 @@
     --color-primary:rgb(0, 0, 0);
     --background-color:rgb(255, 255, 255);
     --hr-color:rgb(207, 202, 202);
+    --icon-color:gray;
 }
 
 /* :root[mode="dark"]{
@@ -14,7 +15,9 @@
 .bgColor-primary{
     background-color: var(--background-color);
 }
-
+.margin-auto > div{
+    margin:auto;
+}
 .full-divider{
     height: 2px !important;
     background-color: black;
@@ -33,14 +36,23 @@ p{
     margin-top: 5px;
     margin-bottom: 25px;
 }
-.medium-img-size{
+.large-img-size{
     max-width:604%;
     max-height:337px;
 }
 .small-img-size{
-    width:188px;
-    height:141px;
+    width:225px;
+    height:136px;
     margin-bottom: 10px;
+}
+.medium-img-size{
+    width:300px;
+    height:176px;
+    margin-bottom: 10px;
+}
+
+.icon-color{
+    color: var(--icon-color);
 }
 .header {
     position: fixed;
