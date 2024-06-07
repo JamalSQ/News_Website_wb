@@ -5,6 +5,18 @@
     --hr-color:rgb(207, 202, 202);
     --icon-color:gray;
 }
+h1,h2,h3,h4,h5,h6{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+p,small,span,ul,li,strong,pre{
+    font-family:Open Sans;
+}
+body{
+    overflow-x: hidden;
+    margin: 0px 20px;
+}
 
 /* :root[mode="dark"]{
     --color-primary:white;
@@ -12,10 +24,24 @@
     --hr-color:rgb(207, 202, 202);
 } */
 
+
+
+.signlogin{
+    display: inline-flex;
+}
+
+
+.bgColorMain{
+    background-color:gray;
+}
+
 .bgColor-primary{
     background-color: var(--background-color);
 }
 .margin-auto > div{
+    margin:auto;
+}
+.margin-auto{
     margin:auto;
 }
 .full-divider{
@@ -36,57 +62,137 @@ p{
     margin-top: 5px;
     margin-bottom: 25px;
 }
-.large-img-size{
-    max-width:604%;
-    max-height:337px;
+.Xlarge-img-size{
+    max-width: 904px;
+    max-height: 370px;
+    box-shadow: 0px 0px 6px 0px gray;
 }
-.small-img-size{
-    width:225px;
-    height:136px;
-    margin-bottom: 10px;
+.large-img-size{
+    max-width: 100%; /* Ensures the image doesn't exceed its container */
+    height: auto; /* Allows the image to scale proportionally */
+    display: block; /* Ensures the image behaves like a block element */
+    margin: 0 auto;   
+    box-shadow: 0px 0px 6px 0px gray;
 }
 .medium-img-size{
-    width:300px;
-    height:176px;
+    max-width: 100%; /* Ensures the image doesn't exceed its container */
+    height: auto; /* Allows the image to scale proportionally */
+    display: block; /* Ensures the image behaves like a block element */
+    margin: 0 auto; 
     margin-bottom: 10px;
+    box-shadow: 0px 0px 6px 0px gray;
+    border-radius: 10px;
+}
+
+.small-img-size{
+    max-width: 100%; /* Ensures the image doesn't exceed its container */
+    height: auto; /* Allows the image to scale proportionally */
+    display: block; /* Ensures the image behaves like a block element */
+    margin: 0 auto; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px 0px gray;
 }
 
 .icon-color{
     color: var(--icon-color);
 }
-.header {
-    position: fixed;
-    z-index: 1;
+
+
+/* header css */
+
+.stripe{
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 0px;
 }
+
+.header {
+    position: static;
+    z-index: 1;
+    margin-top: 0px;
+}
+.newsnews{
+    padding: 20px 0px 0px 0px;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: black;
+
+}
+
+.postContainer{
+    padding:40px;
+    margin-left: 80px;
+    background-color: #dad5d5;
+}
+
+
 body > div.container-fluid.header > div.row.sub-heading.bg-light > hr{
     margin-bottom: 0px;
 }
 .container-fluid,.header{
     padding-right: 0px;
 }
+
+.sub-heading{
+    justify-content: center;
+}
+
 .sub-heading ul {
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
     line-height: 1px;
     font-size: 11px;
 }
 .sub-heading ul li {
-    display: inline;
-    padding-right: 15px;
+  list-style: none;
+}
+
+.sub-heading ul li a{
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 15px;
+}
+
+.sub-heading ul li a:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.main-heading{
+    justify-content: center;
 }
 .main-heading ul {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    justify-content:center;
     line-height: 1px;
     font-size: 13px;
     font-weight: 500;
 }
-
 .main-heading ul li {
-    display: inline;
-    padding-right: 15px;
+    list-style: none;
+}
+.main-heading ul li a{
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.main-heading ul li a:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
 .fheading ul {
@@ -146,3 +252,245 @@ summary{
         margin-top: 127px;
         z-index: -6;
     }
+
+    /* Single post  */
+    .single-post{
+        padding-top: 103px;
+        width: 50%;
+        margin: auto;
+    }
+    .single-post-text{
+        width: 50%;
+        margin: auto;
+    }
+    .custom-btn{
+        background-color:lightgray;
+        color: black;
+        border: 0px;
+        padding: 2px 10px 2px 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .custom-btn:hover{
+        background-color: rgba(0, 0, 0, 0.716);
+        color: white;
+    }
+
+    /* Signup css */
+    .signup::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.4); /* Change the color and opacity as needed */
+        z-index: 1; /* Ensure the overlay is above the background image */
+    }
+    .signup{
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../images/newspaper-le-monde-background-old.jpg);
+    }
+
+    .signupform{
+        padding: 20px;
+        border-radius: 20px;
+        background-color: rgb(235, 227, 227);
+        width: 500px;
+        box-shadow: 0px 0px 10px black;
+        z-index: 2;
+    }
+
+
+
+    /* Aside Bar Drawer */
+
+    .dropdown .btnbar:hover {
+        background-color: lightgray;
+        cursor: pointer;
+    }
+    .dropdown ul li:hover {
+        background-color: lightgray;
+        cursor: pointer;
+    }
+    #drawercontent{
+        width: 25%;
+        height: 100vh;
+        position: fixed;
+        top: 0px;
+        left: -410px;
+        overflow-x:hidden ;
+        z-index: 3;
+        scroll-behavior: smooth;
+        overflow-y: scroll;
+        transition: left 0.3s ease-in-out;
+    }
+    .btnbar{
+        padding: 10px 20px;
+    }
+   
+    .btnbar button{
+        border: 0px;
+        background-color:inherit;
+    }
+    .btnbar li{
+        transition: top 0.3s ease-in-out;
+    }
+    .dropdown .btnbar{
+        cursor: pointer;
+    }
+    .drawer-main-heeading ul li{
+        padding: 2px 0px 0px 10px ;
+        list-style: none;
+        cursor: pointer;
+    }
+    #hamburg{
+        cursor: pointer;
+    }
+   
+    
+/* Media Queries */
+/* Extra Small devices (phones) */
+@media (max-width: 575px) {
+    /* CSS rules for small devices */
+    #carouselId,.signlogin{
+        display: none;
+    }
+    .logo h3{
+        margin-left: 200px;
+    }
+
+    #drawercontent{
+        width: 35%;
+        height: 100vh;
+        position: fixed;
+        top: 0px;
+        left: -410px;
+        overflow-x:hidden ;
+        z-index: 3;
+        scroll-behavior: smooth;
+        overflow-y: scroll;
+        transition: left 0.3s ease-in-out;
+    }
+    .signloginindrawer{
+        margin: 10px;
+    }
+
+    /* header */
+    .main-heading,.sub-heading{
+        display: none;
+    }
+    .newsnews{
+        padding-top: 90px;
+    }
+    .fheading ul{
+        /* margin-left: 100px; */
+        letter-spacing: 0.7px;
+        /* font-weight: 500; */
+      }
+ 
+}
+/* Small devices (phones) */
+@media (min-width: 576px) and (max-width: 767px) {
+    /* CSS rules for small devices */
+    #carouselId,.signlogin{
+        display: none;
+    }
+    .logo h3{
+        margin-left: 200px;
+    }
+    #drawercontent{
+        width: 30%;
+        height: 100vh;
+        position: fixed;
+        top: 0px;
+        left: -410px;
+        overflow-x:hidden ;
+        z-index: 3;
+        scroll-behavior: smooth;
+        overflow-y: scroll;
+        transition: left 0.3s ease-in-out;
+    }
+    .signloginindrawer{
+        margin: 10px;
+
+    }
+    /* header */
+    .main-heading,.sub-heading{
+        display: none;
+    }
+    .newsnews{
+        padding-top: 90px;
+    }
+    .fheading ul{
+        /* margin-left: 100px; */
+        letter-spacing: 0px;
+        /* font-weight: 500; */
+      }
+ 
+   
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* CSS rules for medium devices */
+    .signloginindrawer{
+        display: none;
+    }
+    #carouselId,.signlogin{
+        display: inline-flex;
+    }
+   
+}
+
+/* Large devices (desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* CSS rules for large devices */
+    .signloginindrawer{
+        display: none;
+    }
+   
+}
+
+/* Extra large devices (large desktops) */
+@media (min-width: 1200px) {
+    /* CSS rules for extra large devices */
+    .signloginindrawer{
+        display: none;
+    }
+}
+
+
+/* User hader and sidebar start */
+.sidebar {
+    max-width: 200px;
+    height: 100vh;
+    background-color: #f8f9fa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .user-details {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #dee2e6;
+  }
+  .user-details h4 {
+    margin-bottom: 0;
+  }
+  .nav-link {
+    color: #495057;
+  }
+  .nav-link:hover {
+    background-color: #e9ecef;
+  }
+/* User hader and sidebar End */
+

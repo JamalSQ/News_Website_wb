@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Button Design</title>
+    <style>
+        
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.soft-button {
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #333;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 9px 9px 16px #bebebe,
+                -9px -9px 16px #ffffff;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.soft-button:hover {
+    box-shadow: 4px 4px 8px #bebebe,
+                -4px -4px 8px #ffffff;
+}
+
+.soft-button:active {
+    box-shadow: inset 4px 4px 8px #bebebe,
+                inset -4px -4px 8px #ffffff;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="soft-button">Click Me</button>
+    </div>
+</body>
+</html>
