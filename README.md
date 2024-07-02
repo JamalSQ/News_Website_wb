@@ -1,5 +1,3 @@
-Of course! Here's an enhanced README file incorporating the additional functionalities and user roles:
-
 ## Comprehensive News Website Project
 
 This is a full-featured news website built with PHP. It offers users various functionalities, aiming to provide a platform similar to BBC News.
