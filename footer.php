@@ -73,6 +73,15 @@
 
     </footer>
     <!-- End of Footer -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/wow/wow.js"></script>
+    <script src="js/custom.js"></script>
+ <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
 </body>
 
 </html>

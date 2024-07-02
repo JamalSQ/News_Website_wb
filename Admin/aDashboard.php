@@ -20,11 +20,9 @@ include "adminHeader.php";
   $query6="SELECT count(*) as regCat FROM categories";
   $res6=mysqli_query($conn,$query6);
   $catCount=mysqli_fetch_assoc($res6)['regCat'];
-
-
   ?>
-  <div class="container">
-    <h3 class="text-center my-3">ADMIN DASHBOARD</h3>
+  <div class="container animsition">
+    <h3 class="text-center my-3 animate__animated animate__rubberBand">ADMIN DASHBOARD</h3>
     <div class="row">
       <div class="col-md-4 mt-2">
         <div class="card bg-info">
@@ -71,7 +69,7 @@ include "adminHeader.php";
   <hr>
   <!-- Recent posts Starts -->
        <!-- Main start -->
-       <div class="col-md-12">
+       <div class="col-md-12 animsition">
         <!-- Dashboard content -->
         <div class="postheading">
           <div class="row d-flex justify-content-between">
@@ -225,7 +223,5 @@ include "adminHeader.php";
 
 
 <?php
-
 include "adminFooter.php";
-
 ?>

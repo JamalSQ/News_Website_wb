@@ -31,7 +31,12 @@ $arr=mysqli_fetch_assoc($data);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/all.min.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate/animate.min.css"/>
+
+    <link rel="stylesheet" href="../css/animsation/animsition.min.css">
     <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/animsation/animsition.min.js"></script>
+
     <script src="../js/all.min.js"></script>
     <script src="../js/bootstrap.bundle.js"></script>
     <script src="../js/chart.js"></script>
@@ -42,7 +47,7 @@ $arr=mysqli_fetch_assoc($data);
   <div class="container-fluid">
     <div class="row">
       <nav class="bg-light mb-2 col-md-12 py-2">
-        <a class="navbar-brand fw-bold text-dark" href="#"><h2>World Wide News</h2></a>
+        <a class="navbar-brand fw-bold text-dark" href="#"><h2 class="">World Wide News</h2></a>
       </nav>
     </div>
     <div class="row">
@@ -53,26 +58,26 @@ $arr=mysqli_fetch_assoc($data);
           <p><b>Role: </b>Admin</p>
         </div>
         <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" href="aDashboard.php">Dashboard</a>
+          <li class="nav-item ">
+            <a class="nav-link active animsition-link" href="aDashboard.php">Dashboard</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link  animsition-link" href="aWriteBlog.php">New Post</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="aWriteBlog.php">New Post</a>
+            <a class="nav-link animsition-link" href="aAllPosts.php">All Post</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="aAllPosts.php">All Post</a>
+            <a class="nav-link animsition-link" href="addCategory.php">Add category</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="addCategory.php">Add category</a>
+            <a class="nav-link animsition-link" href="aChangePassword.php">Change Passwod</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="aChangePassword.php">Change Passwod</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../index.php">Logout</a>
+            <a class="nav-link animsition-link" href="../index.php">Logout</a>
           </li>
         </ul>
       </div>
 
 
-    
+

@@ -104,12 +104,12 @@ if (isset($_POST['addsubcategory'])) {
   }
 }
 ?>
-      <div class="col-md-10">
+      <div class="col-md-10 animsition">
         <div class="row">
 
             <!-- Main Content start -->
-          <div class="col-md-5 postContainer rounded bg-light" style="max-height:50vh; box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); margin-top:50px; border:1px solid #F8F4E1;">
-            <h2 class="mb-4 text-center">Add Main Category</h2>
+          <div class="col-md-5 offset-md-1 p-4 me-3 rounded postContainer bg-light" style="max-height:50vh; box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); margin-top:50px; border:1px solid #F8F4E1;">
+            <h2 class="mb-4 text-center animate__animated animate__rubberBand">Add Main Category</h2>
             <form method="POST" action="">
               <div class="form-group">
                 <label for="currentPassword">Name</label>
@@ -133,8 +133,8 @@ if (isset($_POST['addsubcategory'])) {
             </form>
           </div>
 
-          <div class="col-md-5 postContainer rounded bg-light" style="max-height:50vh; margin-top:50px; border:1px solid #F8F4E1; box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);">
-            <h2 class="mb-4 text-center">Add Sub Category</h2>
+          <div class="col-md-5 p-4 postContainer rounded bg-light" style="max-height:50vh; margin-top:50px; border:1px solid #F8F4E1; box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);">
+            <h2 class="mb-4 text-center animate__animated animate__rubberBand">Add Sub Category</h2>
             <form method="POST" action="">
               <div class="form-group">
                 <label for="currentPassword">Sub Category Name</label>

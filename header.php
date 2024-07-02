@@ -1,3 +1,10 @@
+<?php
+function truncateText($text, $num_words) {
+    $words = explode(" ", $text);
+    $truncated_text = implode(" ", array_slice($words, 0, $num_words));
+    return $truncated_text;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,19 +13,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/all.min.js"></script>
-    <script src="js/bootstrap.bundle.js"></script>
-    <script src="js/custom.js"></script>
+    <link rel="stylesheet" href="css/animate/animate.css">
+    <link rel="stylesheet" href="js/hamburgers/hamburgers.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>News Website</title>
+    <style>
+        #menu {
+            display: none;
+        }
+
+        #menu.show {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Start of header -->
     <div class="container-fluid header bgColor-primary ">
         <div class="row pt-3">
+
             <div class="col-sm-2 col-md-5">
+
                 <a id="hamburg"><i class="fa-solid fa-bars fa-xl pe-3"></i></a>
                 <i class="fa-solid fa-magnifying-glass fa-xl"></i>
             </div>
@@ -33,25 +49,31 @@
         <div class="row main-heading">
             <hr>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About US</a></li>
-                <li><a href="#">Contact US</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Travels</a></li>
-                <li><a href="#">Contact US</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Travels</a></li>                
+                <?php
+                include "Admin/conn.php";
+                $query = "SELECT id,name FROM categories";
+                $res = mysqli_query($conn, $query);
+                while ($row = mysqli_fetch_assoc($res)) {
+                    ?>
+                    <li><a href="<?php echo $row['id']; ?>">
+                            <?php echo ucwords($row['name']); ?>
+                        </a></li>
+                <?php } ?>
             </ul>
             <hr>
         </div>
         <div class="row sub-heading">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About US</a></li>
-                <li><a href="#">Contact US</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Travels</a></li>
-                <li><a href="#">Contact US</a></li>
+                <?php
+                include "Admin/conn.php";
+                $query = "SELECT id,name FROM subcategories";
+                $res = mysqli_query($conn, $query);
+                while ($row = mysqli_fetch_assoc($res)) {
+                    ?>
+                    <li><a href="<?php echo $row['id']; ?>">
+                            <?php echo ucwords($row['name']); ?>
+                        </a></li>
+                <?php } ?>
             </ul>
             <hr>
         </div>
@@ -71,97 +93,41 @@
                 <a href="login.php"><button class="btn btn-outline-primary text-black">SignIn</button></a>
             </div>
         </div>
-       
-        <div class="drawer-body pt-3">
 
+        <div class="drawer-body pt-3">
+                     <?php
+                    include "Admin/conn.php";
+                    $query = "SELECT id,name FROM categories";
+                    $res = mysqli_query($conn, $query);
+                    while ($row = mysqli_fetch_assoc($res)) {
+                        ?>
             <div class="dropdown drawer-main-heeading">
                 <div class="btnbar">
-                    <button class="fw-bold">Home</button>
+                   
+                        <button class="fw-bold">
+                            <?php echo ucwords($row['name']); ?>
+                        </button>
+                    
                     <i class="fa-solid fa-angle-down float-end"></i>
                 </div>
                 <ul>
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
+                    <?php  
+                    $id=$row['id'];
+                    $query1 = "SELECT id,name FROM subcategories where main_cat_id=$id";
+                    $res1 = mysqli_query($conn, $query1);
+                    
+                    while ($subCat = mysqli_fetch_assoc($res1)) {
+                        ?>
+                    <li><a href="<?php echo $subCat['id']; ?>"> <?php echo ucwords($subCat['name']); ?></a></li>
+                   <?php }?> 
+
                 </ul>
             </div>
-            <div class="dropdown drawer-main-heeading">
-                <div class="btnbar">
-                    <button class="fw-bold">Sport</button>
-                    <i class="fa-solid fa-angle-down float-end"></i>
-                </div>
-                <ul>
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                </ul>
-            </div>
-            <div class="dropdown drawer-main-heeading">
-                <div class="btnbar">
-                    <button class="fw-bold">News</button>
-                    <i class="fa-solid fa-angle-down float-end"></i>
-                </div>
-                <ul>
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                </ul>
-            </div>
-            <div class="dropdown drawer-main-heeading">
-                <div class="btnbar">
-                    <button class="fw-bold">Bussiness</button>
-                    <i class="fa-solid fa-angle-down float-end"></i>
-                </div>
-                <ul>
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                </ul>
-            </div>
-            <div class="dropdown drawer-main-heeading">
-                <div class="btnbar">
-                    <button class="fw-bold">Innovation</button>
-                    <i class="fa-solid fa-angle-down float-end"></i>
-                </div>
-                <ul>
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                </ul>
-            </div>
-            <div class="dropdown drawer-main-heeading">
-                <div class="btnbar">
-                    <button class="fw-bold">Culture</button>
-                    <i class="fa-solid fa-angle-down float-end"></i>
-                </div>
-                <ul>
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                </ul>
-            </div>
-            <div class="dropdown drawer-main-heeading">
-                <div class="btnbar">
-                    <button class="fw-bold">Travel</button>
-                    <i class="fa-solid fa-angle-down float-end"></i>
-                </div>
-                <ul>
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                </ul>
-            </div>
-            <div class="dropdown drawer-main-heeading">
-                <div class="btnbar">
-                    <button class="fw-bold">Earth</button>
-                    <i class="fa-solid fa-angle-down float-end"></i>
-                </div>
-                <ul>
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                </ul>
-            </div>           
+            <?php } ?>
+
+
+
+
 
         </div>
     </div>

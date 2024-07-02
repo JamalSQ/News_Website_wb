@@ -5,11 +5,11 @@ include "header.php";
     <div class="single-post">
         <div class="row">
             <div class="post-head">
-            <h1>Top UN court orders Israel to allow food and medical aid into Gaza</h1>
+            <h1 class="wow fadeInUp" data-wow-delay="0.1s">Top UN court orders Israel to allow food and medical aid into Gaza</h1>
             <div>
-                <small>2 hours ago<br>
-                <b>By Jamal Siddique Qadri</b>, BBC News</small>
-                <small class="float-end"><i class="fa-solid fa-share-nodes"></i> Share</small>
+                <small class="wow fadeInLeft" data-wow-delay="0.3s">2 hours ago</small><br>
+                <span class="wow fadeInUp" data-wow-delay="0.5s"><b>By Jamal Siddique Qadri</b>, BBC News</span>
+                <small class="float-end wow fadeInRight" data-wow-delay="0.7s"><i class="fa-solid fa-share-nodes"></i> Share</small>
             </div>
         </div>
         </div>
@@ -19,7 +19,7 @@ include "header.php";
     <!-- Start of Main Img of single post -->
     <div class="container my-3">
         <figure class="text-center">
-            <img src="images/4.jpg" class="Xlarge-img-size" alt="">
+            <img src="images/4.jpg" class="Xlarge-img-size wow fadeIn" data-wow-delay="0.3s" alt="">
             <figcaption>Children with empty pots wait as aid workers distribute food in Gaza City earlier this month</figcaption>
         </figure>
     </div>

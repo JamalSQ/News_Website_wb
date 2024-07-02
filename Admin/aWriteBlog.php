@@ -44,11 +44,11 @@ if (isset($_POST['postPublish'])) {
 }
 ?>
       <!-- Main Content -->
-      <div class="col-md-9 postContainer">
+      <div class="col-md-9 postContainer animsition">
 
       <div class="row">
         <div class="col-md-4">
-        <h4 class="mb-4 text-center fw-bold">NEWS POST EDITOR</h4>
+        <h4 class="mb-4 text-center fw-bold animate__animated animate__rubberBand">NEWS POST EDITOR</h4>
         </div>
         <div class="col-md-8">
         <?php

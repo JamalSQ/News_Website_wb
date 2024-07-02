@@ -1,0 +1,56 @@
+  <?php 
+    include 'fetch_data.php';
+    
+    // Divide data into chunks
+    $mainChunks = array_chunk($data, 1);
+    $sidebarChunks = array_chunk($data, 2);    
+    $subMainChunks = array_chunk($data, 3);
+
+    foreach ($mainChunks as $chunkIndex => $mainChunk) {
+        $sidebarChunk = isset($sidebarChunks[$chunkIndex]) ? $sidebarChunks[$chunkIndex] : [];
+        $subMainChunk = isset($subMainChunks[$chunkIndex]) ? $subMainChunks[$chunkIndex] : [];
+    ?>
+    <div class="row pt-5">
+        <div class="col-md-9">
+            <div class="row">
+                <?php foreach ($mainChunk as $row) { ?>
+                <div class="col-sm-12 col-md-5 mt-5 wow fadeInUp" data-wow-delay="0.3s">
+                    <a href="SinglePost.php">
+                        <h2><?php echo $row['title']; ?></h2>
+                        <p><?php echo $row['content']; ?></p>
+                        <p><small class="text-body-secondary">Last updated <?php echo $row['date']; ?></small></p>
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-7 wow fadeInDown" data-wow-delay="0.3s">
+                    <a href="SinglePost.php">
+                        <img src="images/uploadedFiles/<?php echo $row['image']; ?>" class="large-img-size" alt="" srcset="">
+                    </a>
+                </div>
+                <hr class="pm">
+                <?php } ?>
+            </div>
+            <div class="row">
+                <?php foreach ($subMainChunk as $row) { ?>
+                <div class="col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <img src="images/uploadedFiles/<?php echo $row['image']; ?>" class="medium-img-size" alt="...">
+                    <h5><?php echo $row['title']; ?></h5>
+                    <p class="card-text mb-3"><?php echo $row['content']; ?></p>
+                    <p><?php echo $row['date']; ?> | <?php echo $row['author']; ?></p>
+                    <hr>
+                </div>
+                <?php } ?>
+            </div>
+        </div>
+        <div class="col-md-3 border bg-light wow fadeInUp" data-wow-delay="0.3s">
+            <?php foreach ($sidebarChunk as $row) { ?>
+            <div>
+                <img src="images/uploadedFiles/<?php echo $row['image']; ?>" class="small-img-size" alt="...">
+                <h5><?php echo $row['title']; ?></h5>
+                <p class="card-text mb-3"><?php echo $row['content']; ?></p>
+                <p><?php echo $row['date']; ?> | <?php echo $row['author']; ?></p>
+                <hr>
+            </div>
+            <?php } ?>
+        </div>
+    </div>
+    <?php } ?>

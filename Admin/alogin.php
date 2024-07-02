@@ -12,6 +12,7 @@ if(isset($_POST['submitbtn'])){
             $msg=1;
         }else{
             $qu1="Select * from  adminlogin where aemail='$email' and apass='$pass'";
+            print_r($qu1);
             $re1=mysqli_query($conn,$qu1);
            if(mysqli_num_rows($re1)>0){
             $arr=mysqli_fetch_assoc($re1);
@@ -46,11 +47,11 @@ if(isset($_POST['submitbtn'])){
         <form action="" method="POST" class="signupform">
         <h1 class="text-center fw-bold py-3">ADMIN LOGIN</h1>
             <div class="col-md-12">
-                <input type="email" placeholder="Email" name="email" id="email" class="form-control">
+                <input type="text" placeholder="Email" name="email" id="" class="form-control">
                 <span id="emailError" class="error" style="display:none;"></span><br>
             </div>
             <div class="col-md-12">
-                <input type="password" name="pass" placeholder="Password" id="password" class="form-control">
+                <input type="password" name="pass" placeholder="Password" id="" class="form-control">
                 <span id="passwordError" class="error" style="display:none;"></span><br>
             </div>
             <div>

@@ -11,13 +11,12 @@ if(isset($_POST['changepass'])){
   $res=mysqli_query($conn,$q);
   $row=mysqli_fetch_assoc($res);
   print_r($row);
-
 }
 ?>
 
       <!-- Main Content start -->
-      <div class="col-md-8 postContainer">
-        <h2 class="mb-4 text-center">Change Password</h2>
+      <div class="col-md-8 postContainer animsition">
+        <h2 class="mb-4 text-center animate__animated animate__rubberBand">Change Password</h2>
         <form method="POST" action="">
           <div class="form-group">
             <label for="currentPassword">Email</label>

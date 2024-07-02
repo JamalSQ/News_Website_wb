@@ -2,12 +2,12 @@
 include "adminHeader.php";
 ?>
       <!-- Main start -->
-      <div class="col-md-10 ml-5">
+      <div class="col-md-10 ml-5 animsition">
         <!-- Dashboard content -->
         <div class="postheading">
           <div class="row d-flex justify-content-between">
             <div class="col-md-4">
-              <h4 class="mb-4">All POSTS</h4>
+              <h4 class="mb-4 animate__animated animate__rubberBand">All POSTS</h4>
             </div>
             <div class="col-md-4">
               <input type="search" placeholder="search" class="form-control">

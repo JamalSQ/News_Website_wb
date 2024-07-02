@@ -6,112 +6,193 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/all.min.js"></script>
-    <script src="js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="css/animate/animate.css">
+    <link rel="stylesheet" href="js/hamburgers/hamburgers.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>News Website</title>
+    <style>
+          #menu {
+        display: none;
+        }
+
+        #menu.show {
+        display: block;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Start of header -->
-    <div class="container-fluid header bgColor-primary">
+    <div class="container-fluid header bgColor-primary ">
         <div class="row pt-3">
-            <div class="col-md-6">
-                <i class="fa-solid fa-bars fa-xl pe-3"></i>
+            
+        <div class="col-sm-2 col-md-5">
+                <nav id="menu">
+                    <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+      </script>
+
+                <a id="hamburg"><i class="fa-solid fa-bars fa-xl pe-3"></i></a>
                 <i class="fa-solid fa-magnifying-glass fa-xl"></i>
             </div>
-            <div class="col-md-4">
-                <h3>B.B.C</h3>
+            <div class="col-sm-8 col-md-4">
+                <h3>World Wide News</h3>
             </div>
-            <div class="col-md-2">
-                <button class="btn btn-dark text-white">Register</button>
-                <button class="btn text-black">Sign In</button>
+            <div class="col-md-3 signlogin">
+                <a href="registration.php" class="text-white"><button class="btn btn-dark">Register</button></a>
+                <a href="login.php" class="ps-3"><button class="btn btn-outline-primary text-black">SignIn</button></a>
             </div>
         </div>
         <div class="row main-heading">
             <hr>
             <ul>
-                <li>Home</li>
-                <li>About US</li>
-                <li>Contact US</li>
-                <li>Features</li>
-                <li>Travels</li>
-                <li>Contact US</li>
-                <li>Features</li>
-                <li>Travels</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About US</a></li>
+                <li><a href="#">Contact US</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Travels</a></li>
+                <li><a href="#">Contact US</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Travels</a></li>                
             </ul>
             <hr>
         </div>
         <div class="row sub-heading">
             <ul>
-                <li>Home</li>
-                <li>About US</li>
-                <li>Home</li>
-                <li>Home</li>
-                <li>Home</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About US</a></li>
+                <li><a href="#">Contact US</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Travels</a></li>
+                <li><a href="#">Contact US</a></li>
             </ul>
             <hr>
         </div>
     </div>
     <!-- End of header -->
 
-    <!-- Start Crousel content -->
-    <div class="container pt-4">
-        <div class="row">
-            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true"
-                        aria-label="First slide"></li>
-                    <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
-                    <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <img src="images/1.jpg" class="w-100 d-block" alt="First slide" />
-                        <div class="carousel-caption d-none d-md-block">
-                            <h3>Title</h3>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/wp3022778-3d-wallpaper-for-laptop.jpg" class="w-100 d-block"
-                            alt="Second slide" />
-                        <div class="carousel-caption d-none d-md-block">
-                            <h3>Title</h3>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/wp3022771-3d-wallpaper-for-laptop.jpg" class="w-100 d-block"
-                            alt="Third slide" />
-                        <div class="carousel-caption d-none d-md-block">
-                            <h3>Title</h3>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+    <!-- start Aside bar -->
+    <div id="drawercontent" class="bg-light">
+        <div class="bg-info p-5 text-white">
+
+            <button type="button" id="closebtn" class="btn-close text-reset float-end" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            <h5>World Wide News</h5>
+            <hr>
+            <div class="col-md-3 signloginindrawer">
+                <a href="registration.php" class="text-white"><button class="btn btn-dark">Register</button></a>
+                <a href="login.php"><button class="btn btn-outline-primary text-black">SignIn</button></a>
             </div>
         </div>
-    </div>
-    <!-- End  Crousel content -->
+       
+        <div class="drawer-body pt-3">
 
+            <div class="dropdown drawer-main-heeading">
+                <div class="btnbar">
+                    <button class="fw-bold">Home</button>
+                    <i class="fa-solid fa-angle-down float-end"></i>
+                </div>
+                <ul>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                </ul>
+            </div>
+            <div class="dropdown drawer-main-heeading">
+                <div class="btnbar">
+                    <button class="fw-bold">Sport</button>
+                    <i class="fa-solid fa-angle-down float-end"></i>
+                </div>
+                <ul>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                </ul>
+            </div>
+            <div class="dropdown drawer-main-heeading">
+                <div class="btnbar">
+                    <button class="fw-bold">News</button>
+                    <i class="fa-solid fa-angle-down float-end"></i>
+                </div>
+                <ul>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                </ul>
+            </div>
+            <div class="dropdown drawer-main-heeading">
+                <div class="btnbar">
+                    <button class="fw-bold">Bussiness</button>
+                    <i class="fa-solid fa-angle-down float-end"></i>
+                </div>
+                <ul>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                </ul>
+            </div>
+            <div class="dropdown drawer-main-heeading">
+                <div class="btnbar">
+                    <button class="fw-bold">Innovation</button>
+                    <i class="fa-solid fa-angle-down float-end"></i>
+                </div>
+                <ul>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                </ul>
+            </div>
+            <div class="dropdown drawer-main-heeading">
+                <div class="btnbar">
+                    <button class="fw-bold">Culture</button>
+                    <i class="fa-solid fa-angle-down float-end"></i>
+                </div>
+                <ul>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                </ul>
+            </div>
+            <div class="dropdown drawer-main-heeading">
+                <div class="btnbar">
+                    <button class="fw-bold">Travel</button>
+                    <i class="fa-solid fa-angle-down float-end"></i>
+                </div>
+                <ul>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                </ul>
+            </div>
+            <div class="dropdown drawer-main-heeading">
+                <div class="btnbar">
+                    <button class="fw-bold">Earth</button>
+                    <i class="fa-solid fa-angle-down float-end"></i>
+                </div>
+                <ul>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                </ul>
+            </div>           
+
+        </div>
+    </div>
+    <!-- End Aside bar -->
     <!-- Start News content -->
-    <div class="container-fluid pt-5 px-5">
-        <h1 class="text-danger fw-bold">NEWS</h1>
+    <div class="container-fluid newsnews">
+        <h1 class="text-danger fw-bold animated slideInLeft">NEWS</h1>
         <hr class="full-divider">
         <div class="row pt-5">
             <div class="col-md-9">
                 <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-sm-12 col-md-5 mt-5 wow fadeInUp" data-wow-delay="0.3s">
+                        <a href="SinglePost.php">
                         <h2>Card title Card title Card title </h2>
                         <p>This is a wider card with supporting text below as a natural lead-in to additional content.
                             This
@@ -122,16 +203,19 @@
                             <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, exercitati</li>
                             <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, exercitati</li>
                         </ul>
+                        </a>
                     </div>
-
-                    <div class="col-md-7">
+                    <div class="col-sm-12 col-md-7 wow fadeInDown" data-wow-delay="0.3s">
+                        <a href="SinglePost.php">
                         <img src="images/alesia-kazantceva-VWcPlbHglYc-unsplash (1).jpg" class="large-img-size" alt=""
                             srcset="">
+                            </a>
                     </div>
+                    
                     <hr class="pm">
 
-                    <div class="col-md-3">
-                        <img src="images/andrew-small-EfhCUc_fjrU-unsplash.jpg" class="small-img-size" alt="...">
+                    <div class="col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.1s" >
+                        <img src="images/andrew-small-EfhCUc_fjrU-unsplash.jpg" class="medium-img-size" alt="...">
                         <h5>Lorem ipsum dolor sit amet, consectetur</h5>
                         <p class="card-text mb-3">Some quick example text to build on the card title and make up the
                             bulk of the
@@ -139,8 +223,8 @@
                         <p>8 hrs ago | China</p>
                         <hr>
                     </div>
-                    <div class="col-md-3">
-                        <img src="images/alesia-kazantceva-VWcPlbHglYc-unsplash.jpg" class="small-img-size" alt="...">
+                    <div class="col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <img src="images/kimberly-farmer-lUaaKCUANVI-unsplash.jpg" class="medium-img-size" alt="...">
                         <h5>Lorem ipsum dolor sit amet, consectetur</h5>
                         <p class="card-text mb-3">Some quick example text to build on the card title and make up the
                             bulk of the
@@ -148,17 +232,8 @@
                         <p>8 hrs ago | China</p>
                         <hr>
                     </div>
-                    <div class="col-md-3">
-                        <img src="images/kimberly-farmer-lUaaKCUANVI-unsplash.jpg" class="small-img-size" alt="...">
-                        <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-                        <p class="card-text mb-3">Some quick example text to build on the card title and make up the
-                            bulk of the
-                            card's content.</p>
-                        <p>8 hrs ago | China</p>
-                        <hr>
-                    </div>
-                    <div class="col-md-3">
-                        <img src="images/Bubble-green.jpg" class="small-img-size" alt="...">
+                    <div class="col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <img src="images/alesia-kazantceva-VWcPlbHglYc-unsplash (1).jpg" class="medium-img-size" alt="...">
                         <h5>Lorem ipsum dolor sit amet, consectetur</h5>
                         <p class="card-text mb-3">Some quick example text to build on the card title and make up the
                             bulk of the
@@ -168,10 +243,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 border bg-light  wow fadeInUp" data-wow-delay="0.3s">
                 <div>
-                    <img src="images/wp3022773-3d-wallpaper-for-laptop.jpg" class="card-img-top" alt="...">
-                    <h5>Lorem ipsum dolor sit amet, consectetur</h5>
+                    <img src="images/wp3022773-3d-wallpaper-for-laptop.jpg" class=" small-img-size" alt="...">
+                    <h5>jamal ipsum dolor sit amet, consectetur</h5>
                     <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of
                         the
                         card's content.</p>
@@ -195,8 +270,17 @@
                 </div>
             </div>
         </div>
-        <div class="row margin-auto mt-5">
-            <div class="col-md-2">
+        <div class="row stripe mt-5">
+            <div class="col-sm-6 col-md-4 col-lg-3 wow fadeInDown" data-wow-delay="0.1s">
+                <h5>Stripe ipsum dolor sit amet</h5>
+                <p class="card-text mb-3">Some quick example text to build on the card title and make up the
+                    bulk of the
+                    card's content.</p>
+                <p>8 hrs ago | China</p>
+                <hr>
+            </div>
+           
+            <div class="col-sm-6 col-md-4 col-lg-3 wow fadeInLeft" data-wow-delay="0.3s">
                 <h5>Lorem ipsum dolor sit amet</h5>
                 <p class="card-text mb-3">Some quick example text to build on the card title and make up the
                     bulk of the
@@ -204,7 +288,7 @@
                 <p>8 hrs ago | China</p>
                 <hr>
             </div>
-            <div class="col-md-2">
+            <div class="col-sm-6 col-md-4 col-lg-3 wow fadeInDown" data-wow-delay="0.5s">
                 <h5>Lorem ipsum dolor sit amet</h5>
                 <p class="card-text mb-3">Some quick example text to build on the card title and make up the
                     bulk of the
@@ -212,23 +296,7 @@
                 <p>8 hrs ago | China</p>
                 <hr>
             </div>
-            <div class="col-md-2">
-                <h5>Lorem ipsum dolor sit amet</h5>
-                <p class="card-text mb-3">Some quick example text to build on the card title and make up the
-                    bulk of the
-                    card's content.</p>
-                <p>8 hrs ago | China</p>
-                <hr>
-            </div>
-            <div class="col-md-2">
-                <h5>Lorem ipsum dolor sit amet</h5>
-                <p class="card-text mb-3">Some quick example text to build on the card title and make up the
-                    bulk of the
-                    card's content.</p>
-                <p>8 hrs ago | China</p>
-                <hr>
-            </div>
-            <div class="col-md-2">
+            <div class="col-sm-6 col-md-4 col-lg-3 wow fadeInRight" data-wow-delay="0.7s">
                 <h5>Lorem ipsum dolor sit amet</h5>
                 <p class="card-text mb-3">Some quick example text to build on the card title and make up the
                     bulk of the
@@ -241,9 +309,10 @@
     <!-- End News content -->
 
     <!-- Start Feaatures and analysis content -->
-    <div class="container-fluid pt-5 px-5">
+    <div class="container-fluid pt-5">
         <hr class="full-divider">
-        <h5 class="fw-bold py-2">Features And Analysis</h5>
+        <h3 class="py-2 text-danger wow animate fadeInUp" data-wow-delay="0.3s">Featured And Analysis</h3>
+
         <div class="row">
             <div class="col-md-9">
                 <div class="row">
@@ -284,7 +353,7 @@
                         <hr>
                     </div>
                     <div class="col-sm-6 col-md-4">
-                        <img src="images/Bubble-green.jpg" class="medium-img-size" alt="...">
+                        <img src="images/samantha-gades-BlIhVfXbi9s-unsplash.jpg" class="medium-img-size" alt="...">
                         <h5>Lorem ipsum dolor sit amet, consectetur</h5>
                         <p class="card-text mb-3">Some quick example text to build on the card title and make up the
                             bulk of the
@@ -294,9 +363,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 border bg-light">
                 <div>
-                    <img src="images/wp3022773-3d-wallpaper-for-laptop.jpg" class=" card-img-top" alt="...">
+                    <img src="images/wp3022773-3d-wallpaper-for-laptop.jpg" class="small-img-size" alt="...">
                     <h5>jamal ipsum dolor sit amet, consectetur</h5>
                     <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of
                         the
@@ -324,356 +393,378 @@
     </div>
     <!-- End Feaatures and analysis content -->
 
-<!-- Start Most Watched section -->
-<div class="container-fluid pt-5 px-5">
-    <hr class="full-divider">
-    <h6 class="fw-bold py-2">Most Watched</h6>
-    <div class="row margin-auto">
-        <div class="col-md-2 d-inline-flex">
-            <div class="col-md-2">
-                <i class="fa-solid fa-1 fa-xl icon-color"></i>
+    <!-- Start Most Watched section -->
+    <div class="container-fluid pt-5">
+        <hr class="full-divider">
+        <h3 class="py-2 text-danger">Most Watched</h3>
+        <div class="row margin-auto stripe">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-md-2">
+                    <i class="fa-solid fa-1 fa-xl icon-color"></i>
+                </div>
+                <div class="col-md-10">
+                    <p class="card-text mb-3"><b><i class="fa-brands fa-google-play"></i>WATCH </b>Some quick
+                        example text to build on the card title and make up the
+                        bulk of the
+                        card's content.</p>
+                </div>
             </div>
-            <div class="col-md-10">
-                <p class="card-text mb-3 fw-bold"><b><i class="fa-brands fa-google-play"></i>WATCH </b>Some quick example text to build on the card title and make up the
-                    bulk of the
-                    card's content.</p>
-            </div>
-        </div>
 
-        <div class="col-md-2 d-inline-flex">
-            <div class="col-md-2">
-                <i class="fa-solid fa-2 fa-xl icon-color"></i>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-md-2">
+                    <i class="fa-solid fa-2 fa-xl icon-color"></i>
+                </div>
+                <div class="col-md-10">
+                    <p class="card-text mb-3"><b><i class="fa-brands fa-google-play"></i>WATCH </b>Some quick
+                        example text to build on the card title and make up the
+                        bulk of the
+                        card's content.</p>
+                </div>
             </div>
-            <div class="col-md-10">
-                <p class="card-text mb-3 fw-bold"><b><i class="fa-brands fa-google-play"></i>WATCH </b>Some quick example text to build on the card title and make up the
-                    bulk of the
-                    card's content.</p>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-md-2">
+                    <i class="fa-solid fa-3 fa-xl icon-color"></i>
+                </div>
+                <div class="col-md-10">
+                    <p class="card-text mb-3"><b><i class="fa-brands fa-google-play"></i>WATCH </b>Some quick
+                        example text to build on the card title and make up the
+                        bulk of the
+                        card's content.</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-2 d-inline-flex">
-            <div class="col-md-2">
-                <i class="fa-solid fa-3 fa-xl icon-color"></i>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-md-2">
+                    <i class="fa-solid fa-4 fa-xl icon-color"></i>
+                </div>
+                <div class="col-md-10">
+                    <p class="card-text mb-3"><b><i class="fa-brands fa-google-play"></i>WATCH </b>Some quick
+                        example text to build on the card title and make up the
+                        bulk of the
+                        card's content.</p>
+                </div>
             </div>
-            <div class="col-md-10">
-                <p class="card-text mb-3 fw-bold"><b><i class="fa-brands fa-google-play"></i>WATCH </b>Some quick example text to build on the card title and make up the
-                    bulk of the
-                    card's content.</p>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-md-2">
+                    <i class="fa-solid fa-5 fa-xl icon-color"></i>
+                </div>
+                <div class="col-md-10">
+                    <p class="card-text mb-3"><b><i class="fa-brands fa-google-play"></i>WATCH </b>Some quick
+                        example text to build on the card title and make up the
+                        bulk of the
+                        card's content.</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-2 d-inline-flex">
-            <div class="col-md-2">
-                <i class="fa-solid fa-4 fa-xl icon-color"></i>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-md-2">
+                    <i class="fa-solid fa-6 fa-xl icon-color"></i>
+                </div>
+                <div class="col-md-10">
+                    <p class="card-text mb-3"><b><i class="fa-brands fa-google-play"></i>WATCH </b>Some quick
+                        example text to build on the card title and make up the
+                        bulk of the
+                        card's content.</p>
+                </div>
             </div>
-            <div class="col-md-10">
-                <p class="card-text mb-3 fw-bold"><b><i class="fa-brands fa-google-play"></i>WATCH </b>Some quick example text to build on the card title and make up the
-                    bulk of the
-                    card's content.</p>
-            </div>
-        </div>
-        <div class="col-md-2 d-inline-flex">
-            <div class="col-md-2">
-                <i class="fa-solid fa-5 fa-xl icon-color"></i>
-            </div>
-            <div class="col-md-10">
-                <p class="card-text mb-3 fw-bold"><b><i class="fa-brands fa-google-play"></i>WATCH </b>Some quick example text to build on the card title and make up the
-                    bulk of the
-                    card's content.</p>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-md-2">
+                    <i class="fa-solid fa-7 fa-xl icon-color"></i>
+                </div>
+                <div class="col-md-10">
+                    <p class="card-text mb-3"><b><i class="fa-brands fa-google-play"></i>WATCH </b>Some quick
+                        example text to build on the card title and make up the
+                        bulk of the
+                        card's content.</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- End Most Watched section -->
+    <!-- End Most Watched section -->
 
- <!-- Start Also News content -->
- <div class="container-fluid pt-5 px-5">
-    <hr class="full-divider">
-    <h5 class="fw-bold py-2">Also in news</h5>
-    <div class="row">
-        <div class="col-md-9">
-            <div class="row">
-                <div class="col-sm-12 col-md-5 mt-5">
-                    <h2>Biden hosts star-studded NYC fundraiser with Obama and Clinton </h2>
-                    <p>This is a wider card with supporting text below as a natural lead-in to additional content.
-                        This
-                        content is a little bit longer.</p>
-                    <p><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                    <ul>
-                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, exercitati</li>
-                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, exercitati</li>
-                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, exercitati</li>
-                    </ul>
-                </div>
-                <div class="col-sm-12 col-md-7">
-                    <img src="images/alesia-kazantceva-VWcPlbHglYc-unsplash (1).jpg" class="large-img-size" alt=""
-                        srcset="">
-                </div>
-                <hr class="pm">
+    <!-- Start Also News content -->
+    <div class="container-fluid pt-5">
+        <hr class="full-divider">
+        <h3 class="py-2 text-danger">Also In News</h3>
 
-                <div class="col-sm-6 col-md-4">
-                    <img src="images/andrew-small-EfhCUc_fjrU-unsplash.jpg" class="medium-img-size" alt="...">
-                    <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-                    <p class="card-text mb-3">Some quick example text to build on the card title and make up the
-                        bulk of the
+        <div class="row">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-sm-12 col-md-5 mt-5">
+                        <h2>Biden hosts star-studded NYC fundraiser with Obama and Clinton </h2>
+                        <p>This is a wider card with supporting text below as a natural lead-in to additional content.
+                            This
+                            content is a little bit longer.</p>
+                        <p><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        <ul>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, exercitati</li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, exercitati</li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, exercitati</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-7">
+                        <img src="images/alesia-kazantceva-VWcPlbHglYc-unsplash (1).jpg" class="large-img-size" alt=""
+                            srcset="">
+                    </div>
+                    <hr class="pm">
+
+                    <div class="col-sm-6 col-md-4">
+                        <img src="images/andrew-small-EfhCUc_fjrU-unsplash.jpg" class="medium-img-size" alt="...">
+                        <h5>Lorem ipsum dolor sit amet, consectetur</h5>
+                        <p class="card-text mb-3">Some quick example text to build on the card title and make up the
+                            bulk of the
+                            card's content.</p>
+                        <p>8 hrs ago | China</p>
+                        <hr>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <img src="images/kimberly-farmer-lUaaKCUANVI-unsplash.jpg" class="medium-img-size" alt="...">
+                        <h5>Lorem ipsum dolor sit amet, consectetur</h5>
+                        <p class="card-text mb-3">Some quick example text to build on the card title and make up the
+                            bulk of the
+                            card's content.</p>
+                        <p>8 hrs ago | China</p>
+                        <hr>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <img src="images/samantha-gades-BlIhVfXbi9s-unsplash.jpg" class="medium-img-size" alt="...">
+                        <h5>Lorem ipsum dolor sit amet, consectetur</h5>
+                        <p class="card-text mb-3">Some quick example text to build on the card title and make up the
+                            bulk of the
+                            card's content.</p>
+                        <p>8 hrs ago | China</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 border bg-light">
+                <div>
+                    <img src="images/wp3022773-3d-wallpaper-for-laptop.jpg" class=" small-img-size" alt="...">
+                    <h5>jamal ipsum dolor sit amet, consectetur</h5>
+                    <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of
+                        the
                         card's content.</p>
                     <p>8 hrs ago | China</p>
                     <hr>
                 </div>
-                <div class="col-sm-6 col-md-4">
-                    <img src="images/kimberly-farmer-lUaaKCUANVI-unsplash.jpg" class="medium-img-size" alt="...">
+                <div>
                     <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-                    <p class="card-text mb-3">Some quick example text to build on the card title and make up the
-                        bulk of the
+                    <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of
+                        the
                         card's content.</p>
                     <p>8 hrs ago | China</p>
-                    <hr>
                 </div>
-                <div class="col-sm-6 col-md-4">
-                    <img src="images/Bubble-green.jpg" class="medium-img-size" alt="...">
+                <div>
                     <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-                    <p class="card-text mb-3">Some quick example text to build on the card title and make up the
-                        bulk of the
+                    <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of
+                        the
                         card's content.</p>
                     <p>8 hrs ago | China</p>
-                    <hr>
+
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div>
-                <img src="images/wp3022773-3d-wallpaper-for-laptop.jpg" class=" card-img-top" alt="...">
-                <h5>jamal ipsum dolor sit amet, consectetur</h5>
-                <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of
-                    the
-                    card's content.</p>
-                <p>8 hrs ago | China</p>
-                <hr>
-            </div>
-            <div>
+    </div>
+    <!-- End Also News content -->
+
+    <!-- Start Israel-Gaza war category section -->
+    <div class="container-fluid pt-5">
+        <hr class="full-divider">
+        <h3 class="py-2 text-danger">Israel-Gaza War</h3>
+        <div class="row margin-auto">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <img src="images/andrew-small-EfhCUc_fjrU-unsplash.jpg" class="small-img-size" alt="...">
                 <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-                <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of
-                    the
+                <p class="card-text mb-3">Some quick example text to build on the card title and make up the
+                    bulk of the
                     card's content.</p>
                 <p>8 hrs ago | China</p>
             </div>
-            <div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <img src="images/kimberly-farmer-lUaaKCUANVI-unsplash.jpg" class="small-img-size" alt="...">
                 <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-                <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of
-                    the
+                <p class="card-text mb-3">Some quick example text to build on the card title and make up the
+                    bulk of the
                     card's content.</p>
                 <p>8 hrs ago | China</p>
-
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <img src="images/samantha-gades-BlIhVfXbi9s-unsplash.jpg" class="small-img-size" alt="...">
+                <h5>Lorem ipsum dolor sit amet, consectetur</h5>
+                <p class="card-text mb-3">Some quick example text to build on the card title and make up the
+                    bulk of the
+                    card's content.</p>
+                <p>8 hrs ago | China</p>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <img src="images/alesia-kazantceva-VWcPlbHglYc-unsplash (1).jpg" class="small-img-size" alt="...">
+                <h5>Lorem ipsum dolor sit amet, consectetur</h5>
+                <p class="card-text mb-3">Some quick example text to build on the card title and make up the
+                    bulk of the
+                    card's content.</p>
+                <p>8 hrs ago | China</p>
             </div>
         </div>
+
     </div>
-</div>
-<!-- End Also News content -->
+    <!-- End Israel-Gaza war section -->
 
-<!-- Start another category section -->
-<div class="container-fluid pt-5 px-5">
-    <hr class="full-divider">
-    <h6 class="fw-bold py-2">Israel-Gaza war</h6>
-    <div class="row margin-auto">
-        <div class="col-md-2">
-            <img src="images/andrew-small-EfhCUc_fjrU-unsplash.jpg" class="small-img-size" alt="...">
-            <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-            <p class="card-text mb-3">Some quick example text to build on the card title and make up the
-                bulk of the
-                card's content.</p>
-            <p>8 hrs ago | China</p>
-        </div>
-        <div class="col-md-2">
-            <img src="images/alesia-kazantceva-VWcPlbHglYc-unsplash.jpg" class="small-img-size" alt="...">
-            <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-            <p class="card-text mb-3">Some quick example text to build on the card title and make up the
-                bulk of the
-                card's content.</p>
-            <p>8 hrs ago | China</p>
-        </div>
-        <div class="col-md-2">
-            <img src="images/kimberly-farmer-lUaaKCUANVI-unsplash.jpg" class="small-img-size" alt="...">
-            <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-            <p class="card-text mb-3">Some quick example text to build on the card title and make up the
-                bulk of the
-                card's content.</p>
-            <p>8 hrs ago | China</p>
-        </div>
-        <div class="col-md-2">
-            <img src="images/Bubble-green.jpg" class="small-img-size" alt="...">
-            <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-            <p class="card-text mb-3">Some quick example text to build on the card title and make up the
-                bulk of the
-                card's content.</p>
-            <p>8 hrs ago | China</p>
-        </div>
-        <div class="col-md-2">
-            <img src="images/Bubble-green.jpg" class="small-img-size" alt="...">
-            <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-            <p class="card-text mb-3">Some quick example text to build on the card title and make up the
-                bulk of the
-                card's content.</p>
-            <p>8 hrs ago | China</p>
-        </div>
-    </div>
-    
-</div>
-<!-- End Most Watched section -->
-
-<!-- End Most read section -->
-<div class="container-fluid pt-5 px-5">
-    <hr class="full-divider">
-    <h6 class="fw-bold py-2">Most Read</h6>
-    <div class="row margin-auto">
-        <div class="col-md-3 d-inline-flex">
-            <div class="col-md-2">
-                <i class="fa-solid fa-1 fa-xl icon-color"></i>
-            </div>
-            <div class="col-md-10">
-                <p class="card-text mb-3">Some quick example text to build on card's content.</p>
-            </div>
-        </div>
-        <div class="col-md-3 d-inline-flex">
-            <div class="col-md-2">
-                <i class="fa-solid fa-2 fa-xl icon-color"></i>
-            </div>
-            <div class="col-md-10">
-                <p class="card-text mb-3">Some quick example text to build on card's content.</p>
-            </div>
-        </div>
-        <div class="col-md-3 d-inline-flex">
-            <div class="col-md-2">
-                <i class="fa-solid fa-3 fa-xl icon-color"></i>
-            </div>
-            <div class="col-md-10">
-                <p class="card-text mb-3">Some quick example text to build on card's content.</p>
-            </div>
-        </div>
-        <div class="col-md-3 d-inline-flex">
-            <div class="col-md-2">
-                <i class="fa-solid fa-4 fa-xl icon-color"></i>
-            </div>
-            <div class="col-md-10">
-                <p class="card-text mb-3">Some quick example text to build on card's content.</p>
-            </div>
-        </div>
-        <div class="col-md-3 d-inline-flex">
-            <div class="col-md-2">
-                <i class="fa-solid fa-5 fa-xl icon-color"></i>
-            </div>
-            <div class="col-md-10">
-                <p class="card-text mb-3">Some quick example text to build on card's content.</p>
-            </div>
-        </div>
-        <div class="col-md-3 d-inline-flex">
-            <div class="col-md-2">
-                <i class="fa-solid fa-6 fa-xl icon-color"></i>
-            </div>
-            <div class="col-md-10">
-                <p class="card-text mb-3">Some quick example text to build on card's content.</p>
-            </div>
-        </div>
-        <div class="col-md-3 d-inline-flex">
-            <div class="col-md-2">
-                <i class="fa-solid fa-7 fa-xl icon-color"></i>
-            </div>
-            <div class="col-md-10">
-                <p class="card-text mb-3">Some quick example text to build on card's content.</p>
-            </div>
-        </div>
-        <div class="col-md-3 d-inline-flex">
-            <div class="col-md-2">
-                <i class="fa-solid fa-8 fa-xl icon-color"></i>
-            </div>
-            <div class="col-md-10">
-                <p class="card-text mb-3">Some quick example text to build on card's content.</p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Most read section -->
-
-<!-- End sport News content -->
- <div class="container-fluid px-5">
-    <hr class="full-divider">
-    <h5 class="fw-bold py-2">Sport</h5>
-    <div class="row">
-        <div class="col-md-9">
-            <div class="row">
-                <div class="col-sm-12 col-md-5 mt-5">
-                    <h2>Biden hosts star-studded NYC fundraiser with Obama and Clinton </h2>
-                    <p>This is a wider card with supporting text below as a natural lead-in to additional content.
-                        This
-                        content is a little bit longer.</p>
-                    <p><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                    <ul>
-                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, exercitati</li>
-                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, exercitati</li>
-                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, exercitati</li>
-                    </ul>
+    <!-- End Most read section -->
+    <div class="container-fluid my-5">
+        <hr class="full-divider">
+        <h3 class="py-2 text-danger">Most Read</h3>
+        <div class="row margin-auto stripe">
+            <div class="col-md-3 d-inline-flex">
+                <div class="col-md-2">
+                    <i class="fa-solid fa-1 fa-xl icon-color"></i>
                 </div>
-                <div class="col-sm-12 col-md-7">
-                    <img src="images/alesia-kazantceva-VWcPlbHglYc-unsplash (1).jpg" class="large-img-size" alt=""
-                        srcset="">
+                <div class="col-md-10">
+                    <p class="card-text mb-3">Some quick example text to build on card's content.</p>
                 </div>
-                <hr class="pm">
+            </div>
+            <div class="col-md-3 d-inline-flex">
+                <div class="col-md-2">
+                    <i class="fa-solid fa-2 fa-xl icon-color"></i>
+                </div>
+                <div class="col-md-10">
+                    <p class="card-text mb-3">Some quick example text to build on card's content.</p>
+                </div>
+            </div>
+            <div class="col-md-3 d-inline-flex">
+                <div class="col-md-2">
+                    <i class="fa-solid fa-3 fa-xl icon-color"></i>
+                </div>
+                <div class="col-md-10">
+                    <p class="card-text mb-3">Some quick example text to build on card's content.</p>
+                </div>
+            </div>
+            <div class="col-md-3 d-inline-flex">
+                <div class="col-md-2">
+                    <i class="fa-solid fa-4 fa-xl icon-color"></i>
+                </div>
+                <div class="col-md-10">
+                    <p class="card-text mb-3">Some quick example text to build on card's content.</p>
+                </div>
+            </div>
+            <div class="col-md-3 d-inline-flex">
+                <div class="col-md-2">
+                    <i class="fa-solid fa-5 fa-xl icon-color"></i>
+                </div>
+                <div class="col-md-10">
+                    <p class="card-text mb-3">Some quick example text to build on card's content.</p>
+                </div>
+            </div>
+            <div class="col-md-3 d-inline-flex">
+                <div class="col-md-2">
+                    <i class="fa-solid fa-6 fa-xl icon-color"></i>
+                </div>
+                <div class="col-md-10">
+                    <p class="card-text mb-3">Some quick example text to build on card's content.</p>
+                </div>
+            </div>
+            <div class="col-md-3 d-inline-flex">
+                <div class="col-md-2">
+                    <i class="fa-solid fa-7 fa-xl icon-color"></i>
+                </div>
+                <div class="col-md-10">
+                    <p class="card-text mb-3">Some quick example text to build on card's content.</p>
+                </div>
+            </div>
+            <div class="col-md-3 d-inline-flex">
+                <div class="col-md-2">
+                    <i class="fa-solid fa-8 fa-xl icon-color"></i>
+                </div>
+                <div class="col-md-10">
+                    <p class="card-text mb-3">Some quick example text to build on card's content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Most read section -->
 
-                <div class="col-sm-6 col-md-4">
-                    <img src="images/andrew-small-EfhCUc_fjrU-unsplash.jpg" class="medium-img-size" alt="...">
-                    <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-                    <p class="card-text mb-3">Some quick example text to build on the card title and make up the
-                        bulk of the
+    <!-- End sport News content -->
+    <div class="container-fluid">
+        <hr class="full-divider">
+        <h3 class="py-2 text-danger">Sports</h3>
+
+        <div class="row">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-sm-12 col-md-5 mt-5">
+                        <h2>Biden hosts star-studded NYC fundraiser with Obama and Clinton </h2>
+                        <p>This is a wider card with supporting text below as a natural lead-in to additional content.
+                            This
+                            content is a little bit longer.</p>
+                        <p><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        <ul>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, exercitati</li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, exercitati</li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, exercitati</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-7">
+                        <img src="images/alesia-kazantceva-VWcPlbHglYc-unsplash (1).jpg" class="large-img-size" alt=""
+                            srcset="">
+                    </div>
+                    <hr class="pm">
+
+                    <div class="col-sm-6 col-md-4">
+                        <img src="images/andrew-small-EfhCUc_fjrU-unsplash.jpg" class="medium-img-size" alt="...">
+                        <h5>Lorem ipsum dolor sit amet, consectetur</h5>
+                        <p class="card-text mb-3">Some quick example text to build on the card title and make up the
+                            bulk of the
+                            card's content.</p>
+                        <p>8 hrs ago | China</p>
+                        <hr>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <img src="images/kimberly-farmer-lUaaKCUANVI-unsplash.jpg" class="medium-img-size" alt="...">
+                        <h5>Lorem ipsum dolor sit amet, consectetur</h5>
+                        <p class="card-text mb-3">Some quick example text to build on the card title and make up the
+                            bulk of the
+                            card's content.</p>
+                        <p>8 hrs ago | China</p>
+                        <hr>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <img src="images/samantha-gades-BlIhVfXbi9s-unsplash.jpg" class="medium-img-size" alt="...">
+                        <h5>Lorem ipsum dolor sit amet, consectetur</h5>
+                        <p class="card-text mb-3">Some quick example text to build on the card title and make up the
+                            bulk of the
+                            card's content.</p>
+                        <p>8 hrs ago | China</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 border bg-light">
+                <div>
+                    <img src="images/wp3022773-3d-wallpaper-for-laptop.jpg" class=" small-img-size" alt="...">
+                    <h5>jamal ipsum dolor sit amet, consectetur</h5>
+                    <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of
+                        the
                         card's content.</p>
                     <p>8 hrs ago | China</p>
                     <hr>
                 </div>
-                <div class="col-sm-6 col-md-4">
-                    <img src="images/kimberly-farmer-lUaaKCUANVI-unsplash.jpg" class="medium-img-size" alt="...">
+                <div>
                     <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-                    <p class="card-text mb-3">Some quick example text to build on the card title and make up the
-                        bulk of the
+                    <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of
+                        the
                         card's content.</p>
                     <p>8 hrs ago | China</p>
-                    <hr>
                 </div>
-                <div class="col-sm-6 col-md-4">
-                    <img src="images/Bubble-green.jpg" class="medium-img-size" alt="...">
+                <div>
                     <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-                    <p class="card-text mb-3">Some quick example text to build on the card title and make up the
-                        bulk of the
+                    <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of
+                        the
                         card's content.</p>
                     <p>8 hrs ago | China</p>
-                    <hr>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div>
-                <img src="images/wp3022773-3d-wallpaper-for-laptop.jpg" class=" card-img-top" alt="...">
-                <h5>jamal ipsum dolor sit amet, consectetur</h5>
-                <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of
-                    the
-                    card's content.</p>
-                <p>8 hrs ago | China</p>
-                <hr>
-            </div>
-            <div>
-                <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-                <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of
-                    the
-                    card's content.</p>
-                <p>8 hrs ago | China</p>
-            </div>
-            <div>
-                <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-                <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of
-                    the
-                    card's content.</p>
-                <p>8 hrs ago | China</p>
 
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- End sport News content -->
+    <!-- End sport News content -->
 
     <!-- Start of Footer -->
     <hr class="full-page-divider">
@@ -687,8 +778,7 @@
                 <li>Features</li>
                 <li>Travels</li>
                 <li>Contact US</li>
-                <li>Features</li>
-                <li>Travels</li>
+               
             </ul>
             <details>
                 <summary>BBC in other languages</summary>
@@ -739,8 +829,7 @@
                 <li>Features</li>
                 <li>Travels</li>
                 <li>Contact US</li>
-                <li>Features</li>
-                <li>Travels</li>
+                
             </ul>
         </div>
 
@@ -751,6 +840,15 @@
 
     </footer>
     <!-- End of Footer -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/wow/wow.js"></script>
+    <script src="js/custom.js"></script>
+ <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
 </body>
 
 </html>
